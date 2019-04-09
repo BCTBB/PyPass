@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+{% block body %}
+<div class="block1">
+<img src="{{url_for('static', filename='image.jpg')}}" width="192" height="128">
+<h1>Welcome to the Password Generator</h1>
+  <h2>{{ message }}</h2>
+  <p>
+        {% if 'To view' in message %}
+        {% elif 'Specify' in message %}
+        {% elif 'Password is too long' in message %}
+        {% else %}
+        Password: {{ randomPassword }}
+      <br>
+        Return_Code: {{ randomString }}
+      <br>
+        Being Retained for: {{ retainDays }} Day(s)
+      <br><br>
+        Todays Date: {{ todaysDate }}
+      <br>
+        Password Expiration: {{ passwordExpiration }}
+        {% endif %}
+  </p>
+</div>
+{% endblock %}

@@ -1,0 +1,54 @@
+{% extends "layout.html" %}
+{% block body %}
+<div class="block1">
+<img src="{{url_for('static', filename='image.jpg')}}" width="192" height="128">
+<h1>Welcome to the Password Generator</h1>
+      <form action = "{{ url_for('generatepw') }}">
+         <fieldset>
+              {% for message in form.UserName.errors %}
+                <div>{{ message }}</div>
+              {% endfor %}
+
+              {% for message in form.PWLength.errors %}
+                <div>{{ message }}</div>
+              {% endfor %}
+
+              {% for message in form.retention.errors %}
+                <div>{{ message }}</div>
+              {% endfor %}
+            <h2>Generate a Password</h2>
+            {{ form.hidden_tag() }}
+
+            <div>
+               {{ form.UserName.label }}
+               {{ form.UserName }}
+               <br>
+               {{ form.PWLength.label }}
+               {{ form.PWLength }}
+               <br>
+               {{ form.retention.label }}
+               {{ form.retention }}
+               <br>
+               {{ form.submit }}
+            </div>
+         </fieldset>
+      </form>
+      <form action = "{{ url_for('hascode') }}">
+         <fieldset>
+              {% for message in form.Number.errors %}
+                <div>{{ message }}</div>
+              {% endfor %}
+
+            <h2>Do you have an existing code?</h2>
+            {{ form.hidden_tag() }}
+
+            <div>
+               {{ form.Number.label }}
+               {{ form.Number }}
+               <br>
+               {{ form.submit }}
+            </div>
+         </fieldset>
+      </form>
+</div>
+{% endblock %}
