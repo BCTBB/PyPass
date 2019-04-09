@@ -37,3 +37,8 @@ PRIMARY KEY(userId)
 ```
 GRANT ALL PRIVILEGES ON *.* TO 'mySecretUser'@'localhost' IDENTIFIED BY 'J^PbsuaFvWh6';
 ```
+
+# Running PyPass
+```
+python passwords.py
+```
