@@ -7,7 +7,7 @@ from forms import loginForm
 mysql = MySQL()
 app = Flask(__name__)
 app.config['MYSQL_DATABASE_USER'] = 'mySecretUser'
-app.config['MYSQL_DATABASE_PASSWORD'] = 'J^PbsuaFvWh6'
+app.config['MYSQL_DATABASE_PASSWORD'] = '<Password>'
 app.config['MYSQL_DATABASE_DB'] = 'EmpData'
 app.config['MYSQL_DATABASE_HOST'] = 'localhost'
 app.secret_key = ''.join(random.choice(string.ascii_letters + string.digits) for _ in range(int(32)))
