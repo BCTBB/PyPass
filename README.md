@@ -35,7 +35,7 @@ PRIMARY KEY(userId)
 
 # Create Database User
 ```
-GRANT ALL PRIVILEGES ON *.* TO 'mySecretUser'@'localhost' IDENTIFIED BY 'J^PbsuaFvWh6';
+GRANT ALL PRIVILEGES ON *.* TO 'mySecretUser'@'localhost' IDENTIFIED BY '<Password>';
 ```
 
 # Running PyPass
